@@ -1,0 +1,23 @@
+@model IEnumerable<FirstProject.Models.Game>
+
+<div class="container mt-5">
+    <h2>Video Game Collection</h2>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model) {
+                <tr>
+                    <td>@game.Id</td>
+                    <td>@game.Title</td>
+                    <td>@game.Genre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+@model IEnumerable<FirstProject.Models.User>
+
+<div class="container">
+    <h1 class="display-4">User Directory</h1>
+    <hr />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Username</td>
+                    <td>@user.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
